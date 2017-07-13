@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+}
+
+header {
+  h1 {
+    margin: 0;
+    background-color: #a040a0;
+    color: white;
+    padding: 10px;
+  }
+  .sidenav {
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    border-right: 1px solid #cccccc;
+    background-color: white;
+    li{
+      a{
+        display: block;
+        color: #000000;
+        text-decoration: none;
+        font-weight: bolder;
+        padding: 15px 30px;
+        &:hover{
+          background-color: #cccccc;
+        }
+        &:visited{
+          color: #000;
+        }
+      }
+    }
+  }
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  margin-left: 200px;
+  ul {
+    display: flex;
+  }
+  li {
+    position: relative;
+    margin-left: 5px;
+    img {
+      display: block;
+    }
+    & > span {
+      position: absolute;
+      top:0;
+      width: 100%;
+      height: 110%;
+      z-index: -1;
+      display: flex;
+      span {
+        display: block;
+        font-style: italic;
+        flex-grow: 1;
+        text-align: center;
+        text-indent: 110%;
+        overflow: hidden;
+      }
+      .normal {
+        background: linear-gradient(to bottom, #a8a77a, transparent);
+      }
+      .fire {
+        background: linear-gradient(to bottom, #ee8130, transparent);
+      }
+      .water {
+        background: linear-gradient(to bottom, #6390f0, transparent);
+      }
+      .electric {
+        background: linear-gradient(to bottom, #f7d02c, transparent);
+      }
+      .grass {
+        background: linear-gradient(to bottom, #7ac74c, transparent);
+      }
+      .ice {
+        background: linear-gradient(to bottom, #96d9d6, transparent);
+      }
+      .fighting {
+        background: linear-gradient(to bottom, #c22e28, transparent);
+      }
+      .poison {
+        background: linear-gradient(to bottom, #a33ea1, transparent);
+      }
+      .ground {
+        background: linear-gradient(to bottom, #e2bf65, transparent);
+      }
+      .flying {
+        background: linear-gradient(to bottom, #a98ff3, transparent);
+      }
+      .psychic {
+        background: linear-gradient(to bottom, #f95587, transparent);
+      }
+      .bug {
+        background: linear-gradient(to bottom, #a6b91a, transparent);
+      }
+      .rock {
+        background: linear-gradient(to bottom, #b6a136, transparent);
+      }
+      .ghost {
+        background: linear-gradient(to bottom, #735797, transparent);
+      }
+      .dragon {
+        background: linear-gradient(to bottom, #6f35fc, transparent);
+      }
+      .dark {
+        background: linear-gradient(to bottom, #705746, transparent);
+      }
+      .steel {
+        background: linear-gradient(to bottom, #b7b7ce, transparent);
+      }
+      .fairy {
+        background: linear-gradient(to bottom, #d685ad, transparent);
+      }
+    }
+    label {
+      display: block;
+      text-align: center;
+    }
+  }
+}

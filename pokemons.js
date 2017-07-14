@@ -48,14 +48,26 @@ var pokemons = [
  </li>
 * */
 
-function renderPokemon(){
+function renderPokemon(pokemon){
 	let li = document.createElement('li');
 	let img = document.createElement('img');
-	img.src = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png";
-
+	let label = document.createElement('label');
+	let types = document.createElement('span');
+	pokemon.type.forEach((type) => {
+		let span = document.createElement('span');
+		span.textContent = type;
+		span.setAttribute('class', type);
+		types.appendChild(span);
+	})
+	img.src = pokemon.sprite;
+	label.textContent = pokemon.name;
 	li.appendChild(img);
+	li.appendChild(label);
+	li.appendChild(types);
 	document.querySelector('main ul').appendChild(li);
 	
 }
 
-renderPokemon();
+pokemons.forEach(function (item) {
+	renderPokemon(item);
+});

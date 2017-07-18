@@ -10,38 +10,15 @@ document.getElementById('loadMore').addEventListener('click', (event) => {
 	console.log('Search Value: ' + document.getElementById('search').value);
 });
 
-var pokemons = [
-	{
-		"id": 1,
-		"name": "Bulbasaur",
-		"type": [ "grass", "poison" ],
-		"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
-	},
-	{
-		"id": 5,
-		"name": "Charmeleon",
-		"type": [ "fire" ],
-		"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png"
-	},
-	{
-		"id": 15,
-		"name": "Beedrill",
-		"type": [ "bug", "poison" ],
-		"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/15.png"
-	},
-	{
-		"id": 193,
-		"name": "Yanma",
-		"type": [ "bug", "flying" ],
-		"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/193.png"
-	},
-	{
-		"id": 152,
-		"name": "Chikorita",
-		"type": [ "grass" ],
-		"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/152.png"
-	}
-]
+document.getElementById('search').addEventListener('input', (event) => {
+	console.log("EVENT: ", event);
+	console.log("THIS: ", event);
+
+});
+
+fetch('http://pokeapi.nadamo.me/pokemon/').then((response) => console.log('RESPONSE: ', response.body.json)).catch((err) => console.log('ERROR: ', err));
+
+pokemons = [1,5,15];
 
 
 
@@ -78,5 +55,6 @@ function renderPokemon(pokemon){
 }
 
 pokemons.forEach(function (item) {
-	renderPokemon(item);
+	console.log(item, ' ITEM ', getPokemon(item));
+	renderPokemon(getPokemon(item));
 });

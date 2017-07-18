@@ -1,6 +1,15 @@
 /**
  * Created by nadamo on 2017. 07. 14..
  */
+window.addEventListener("load", (event) => {
+	console.log('Document Loaded ', event);
+});
+
+document.getElementById('loadMore').addEventListener('click', (event) => {
+	console.log('Load More...');
+	console.log('Search Value: ' + document.getElementById('search').value);
+});
+
 var pokemons = [
 	{
 		"id": 1,
@@ -42,8 +51,8 @@ var pokemons = [
  alt="bulbasaur" width="96" height="96">
  <label>Bulbasaur</label>
  <span>
- <span class="grass">grass</span>
- <span class="poison">poison</span>
+ 	<span class="grass">grass</span>
+ 	<span class="poison">poison</span>
  </span>
  </li>
 * */

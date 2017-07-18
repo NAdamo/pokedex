@@ -8,6 +8,7 @@ window.addEventListener("load", (event) => {
 document.getElementById('loadMore').addEventListener('click', (event) => {
 	console.log('Load More...');
 	console.log('Search Value: ' + document.getElementById('search').value);
+	console.log(pokeData.search(document.querySelector('#search').value));
 });
 
 document.getElementById('search').addEventListener('input', (event) => {
@@ -55,6 +56,5 @@ function renderPokemon(pokemon){
 }
 
 pokemons.forEach(function (item) {
-	console.log(item, ' ITEM ', getPokemon(item));
-	renderPokemon(getPokemon(item));
+	renderPokemon(pokeData.getPokemon(item));
 });

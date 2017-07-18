@@ -1,7 +1,7 @@
 /**
  * Created by nadamo on 2017. 07. 18..
  */
-var getPokemon = (function () {
+var pokeData = (function () {
 	var pokemons = [
 		{
 			'id': 1,
@@ -35,7 +35,9 @@ var getPokemon = (function () {
 		}
 	];
 
-	return function (id) {
-		return pokemons.filter((item) => item.id === id)[0];
+	return {
+		getPokemon: (id) => pokemons.filter((item) => item.id === id)[0],
+		search:(str) => pokemons.filter((item) => item.name.includes(str)),
+		getAllPokemons: pokemons,
 	}
 })();
